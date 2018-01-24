@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+    <div hbox id="top">
+      <div flex=2 hbox align=center>
+        <img width="56" height="56" id="cover">
+        <div vbox align=start>
+          <a href="" id="track" target="_blank"></a>
+          <div id="artists"></div>
+        </div>
+      </div>
+      <div class="progress" flex=1>
+        <div data-cmd="volume">
+          <div id="volume"></div>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div id="bottom">
+      <div class="toolbar">
+        <button class="button" data-cmd="toggle-shuffle" id="shuffle">
+          <?xml version="1.0" ?><svg height="24" version="1.1" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><defs/><g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g fill="#000000" transform="translate(-384.000000, -96.000000)"><path d="M393,109 L391.383673,106.844897 L392.637981,105.183975 L394,107 L396,107 L396,105 L400,108 L396,111 L396,109 Z M388.383673,102.844897 L387,101 L384,101 L384,99 L388,99 L389.637981,101.183975 Z M393.04248,99 L396,99 L396,97 L400,100 L396,103 L396,101 L394.04248,101 L388.000977,109 L384,109 L384,107 L387.000977,107 Z M393.04248,99" class="clc"/></g></g></svg>
+        </button>
+        <button class="button" data-cmd="skip-backward">
+          <?xml version="1.0" ?><svg height="24" viewBox="0 0 32 32" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4 H8 V14 L28 4 V28 L8 18 V28 H4 z" class="clc"/></svg>
+        </button>
+        <button class="button" id="play" data-cmd="pause">
+          <?xml version="1.0" ?><svg height="64" viewBox="0 0 48 48" width="64" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h48v48H0z" fill="none"/>
+            <path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm-2 28h-4V16h4v16zm8 0h-4V16h4v16z" class="clc" data-id="play"/>
+            <path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm-4 29V15l12 9-12 9z" class="clc" data-id="pause"/>
+          </svg>
+
+        </button>
+        <button class="button" data-cmd="skip-forward">
+          <?xml version="1.0" ?><svg height="24" viewBox="0 0 32 32" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4 L24 14 V4 H28 V28 H24 V18 L4 28 z" class="clc"/></svg>
+        </button>
+        <button class="button" data-cmd="toggle-repeat" id="repeat">
+          <?xml version="1.0" ?><svg height="24" viewBox="0 0 48 48" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48H0z" fill="none"/><path d="M14 14h20v6l8-8-8-8v6H10v12h4v-8zm20 20H14v-6l-8 8 8 8v-6h24V26h-4v8z" class="clc"/></svg>
+        </button>
+      </div>
+      <div class="progress">
+        <span id="time">0:00</span>
+        <div id="progressbar" data-cmd="progress">
+          <div id="progress"></div>
+          <span></span>
+        </div>
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+    <div id="no-player" hbox pack=center align=center>
+      Click to open&nbsp;<a href="https://open.spotify.com/browse/" target="_blank">open.spotify.com</a>, or start playing something!
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
